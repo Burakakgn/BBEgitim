@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML Öğretici</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      background-color: #f9f9f9;
+      margin: 0 auto;
+      max-width: 1200px;
+      font-family: Arial, sans-serif;
+    }
+    header {
+      background-color: #ffffff;
+      color: #222;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      margin: 20px 0 20px 0;
+      border-bottom: 1px solid #dddddd;
+      height: 140px;
+  
+    }
+    h1 {
+      font-size: 37px;
+    }
+    p {
+      font-size: 22px;
+    }
+    p a {
+      text-decoration: none;
+      color: black;
+    }
+    p a:hover:first-child {
+      color: #ff6600;
+    }
+    p a:hover:last-child {
+      color: rgb(84,84,252);
+    }
+    nav {
+      display: flex;
+      gap: 10px;
+      justify-content: space-around;
+      font-size: 22px;
+      margin-bottom: 20px;
+    }
+    nav a {
+      text-decoration: none;
+      color: #222;
+      border: 1px solid #555555;
+      padding: 20px;
+      border-radius: 20px;
+      
+    }
+    nav a:hover {
+      background-color: #ff6600;
+      color: #ff6600;
+      border: 0px;
+      color: white;
+      transform: scale(1.1);
+      transition: all 0.4s ease;
+    }
+    .sidebar {
+      background-color: #ffffff;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-top: 10px;
+      margin-right: 10px;
+      font-size: 18px;
+    }
+    .sidebar a {
+      border: 1px solid #dddddd;
+      border-radius: 15px;
+      text-decoration: none;
+      justify-self: center;
+      padding: 10px;
+      background-color: #f0f0f0;
+      color: #222;
+    }
+    .sidebar a:hover {
+      background-color: #ff6600;
+      color: #fff;
+      transform: scale(1.1);
+      transition: all 0.4s ease;
+    }
+    .tümiçerik {
+      display: grid;
+      grid-template-columns: 1fr 4fr;
+    }
+    .içerik {
+      background-color: #ffffff;
+      color: #222;
+      padding: 20px;
+      min-height: 400px;
+      border: 1px solid #dddddd;
+      border-radius: 10px;
+    }
+    .icerik-alani {
+      white-space: pre-line;
+      line-height: 1.6;
+      display: none;
+    }
+    footer {
+      color: #555;
+      text-align: center;
+      margin: 20px 0;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="WhatsApp Görsel 2025-07-03 saat 23.05.26_416437dc.jpg" width="100px" height="100px" alt="">
+    <h1>&lt; HTML /&gt;</h1>
+    <p>LightTheme</p>
+    <p><a href="#">TR</a> / <a href="#">EN</a></p>
+  </header>
+
+  <nav>
+    <a href="index.html">Ana Sayfa</a>
+    <a href="html2.html">HTML</a>
+    <a href="css.html">CSS</a>
+  </nav>
+
+  <div class="tümiçerik">
+    <div class="sidebar">
+      <a href="#" onclick="showDiv('html-giris')">HTML'e Giriş</a>
+      <a href="#" onclick="showDiv('baslik-etiketleri')">Başlık Etiketleri</a>
+      <a href="#" onclick="showDiv('paragraf-etiketi')">Paragraf Etiketi</a>
+      <a href="#" onclick="showDiv('linkler')">Linkler</a>
+      <a href="#" onclick="showDiv('resim-ekleme')">Resim Ekleme</a>
+      <a href="#" onclick="showDiv('liste-turleri')">Liste Türleri</a>
+      <a href="#" onclick="showDiv('html-yapisi')">HTML Yapısı & Bloklar</a>
+      <a href="#" onclick="showDiv('div-span')">Div & Span Kullanımı</a>
+      <a href="#" onclick="showDiv('yapi-etiketleri')">Yapı Etiketleri</a>
+      <a href="#" onclick="showDiv('sayfa-bolumleri')">Sayfa Bölümleri</a>
+      <a href="#" onclick="showDiv('tablolar')">Tablolar</a>
+      <a href="#" onclick="showDiv('form-elementleri')">HTML Form Elementleri</a>
+      <a href="#" onclick="showDiv('form-giris')">Form Giriş Alanları</a>
+      <a href="#" onclick="showDiv('butonlar')">Butonlar & CheckBox</a>
+      <a href="#" onclick="showDiv('form-etiketleri')">Form Etiketleri</a>
+      <a href="#" onclick="showDiv('form-gonderme')">Form Gönderme</a>
+    </div>
+
+    <div class="içerik" id="content">
+      <div id="html-giris" class="icerik-alani">
+        <h2>HTML'e Giriş</h2>
+        <p>HTML (HyperText Markup Language), web sayfalarının temel yapısını oluşturur.
+           Arama motorlarında gördügümüz neredeyse tüm siteler HTML,CSS ve JAVASCRİPT kullanır
+            HTML metinleri biçimlendirmek, resimler eklemek, bağlantılar oluşturmak tablolar hazırlamak
+            ve formlar gibi etkileşimli öğeler için kullanılır <br>
+            Her HTML belgesi temel olarak şu üç bölümden oluşur <br> < !DOCTYPE html > bu bölüm tarayıcıya HTML' kodlarının HTML5 Standartlarında yazıldığını belirtir 
+            < html > Tüm içeriği saran ana etikettir 
+            < head > Sayfanın kullanıcıya görünmeyen önemli kısımlarını içerir 
+            < body > Sayfanın tarayıcıda açılınca göründüğü kısımdır <br>
+            Kısaca Bir HTML Sayfasının genel yapısı şu şeklindedir
+            < !DOCTYPE html > 
+            < html >
+            < head > 
+            < /head >
+            < body > 
+            < /body >
+            < /html >
+       </p>
+      </div>
+
+      <div id="baslik-etiketleri" class="icerik-alani">
+        <h2>Başlık Etiketleri</h2>
+        <p>HTML’de başlık etiketleri, web sayfasının içeriğini hiyerarşik olarak düzenlemek ve metinleri vurgulamak için kullanılır. Başlıklar, hem kullanıcıların sayfayı kolayca taramasına yardımcı olur hem de arama motorlarının içeriği anlamasına katkı sağlar.
+
+            Başlıklar < h1 > ile başlar ve < h6 >'ya kadar devam eder.
+            En önemli ve en büyük başlık < h1 >, en küçük ve en az önemli başlık ise < h6 >'dır.
+        </p>
+      </div>
+
+      <div id="paragraf-etiketi" class="icerik-alani">
+        <h2>Paragraf Etiketi</h2>
+        <p>HTML’de metinleri düzenli ve okunabilir bir şekilde sunmak için paragraf etiketleri kullanılır. Paragraflar, metnin anlam bütünlüğünü koruyarak içerikleri mantıklı bölümlere ayırır.
+
+            Bir paragraf oluşturmak için < p > (paragraph) etiketi kullanılır. Bu etiketin içine yazılan metin, tarayıcıda otomatik olarak bir blok halinde ve diğer paragraflardan boşluklu bir şekilde görüntülenir.
+
+            Paragraf etiketleri, web sayfalarının okunabilirliğini artırmak ve içerikleri görsel olarak düzenlemek için oldukça önemlidir. Özellikle uzun metinlerde kullanıcıların metni kolayca takip edebilmesi için her bir ana fikri ayrı bir paragrafta sunmak gerekir.
+
+            Paragraf etiketleri içinde metin dışında satır içi etiketler (örneğin < strong >, < em >, < a >) kullanılabilir. Ancak paragraf etiketi içine başka bir paragraf veya blok etiketi (örneğin < div >, < section >) yerleştirilmez.
+
+            Metin içinde satır atlamak gerekiyorsa < br > etiketi kullanılabilir veya yeni bir paragraf açılabilir.
+
+
+          </p>
+      </div>
+
+      <div id="linkler" class="icerik-alani">
+        <h2>Linkler</h2>
+        <p>HTML’de linkler (bağlantılar), kullanıcıları başka sayfalara, sitelere, belgelere veya sayfa içindeki bölümlere yönlendirmek için kullanılır. Link oluşturmak için < a > (anchor) etiketi kullanılır.
+
+            Bağlantılar web sayfalarının temel yapı taşlarından biridir ve internette gezinmenin temelini oluşturur. Bağlantılar sayesinde farklı sayfalara geçiş sağlanır veya dış kaynaklara yönlendirme yapılır.
+
+            Bir bağlantı oluşturmanın temel yolu, href (hypertext reference) adlı özniteliği kullanmaktır. Bu öznitelik, bağlantının hangi sayfaya ya da adrese gideceğini belirler.
+
+            Linklerin içerisine genellikle metin yazılır ancak resimler, ikonlar ya da butonlar da konulabilir. Kullanıcılar bu öğelere tıklayarak belirtilen hedefe yönlendirilir.
+        </p>
+      </div>
+
+      <div id="resim-ekleme" class="icerik-alani">
+        <h2>Resim Ekleme</h2>
+        <p>
+          HTML’de web sayfalarına görsel eklemek için < img > etiketi kullanılır. Bu etiket, sayfaları daha görsel, ilgi çekici ve bilgilendirici hale getirmek için önemli bir araçtır. Görseller, kullanıcıların dikkatini çekmek, içerikleri desteklemek ve mesajı güçlendirmek amacıyla kullanılır.
+
+          Bir resim eklemek için < img > etiketinin src ve alt adında iki temel özniteliği bulunur. src özniteliği, gösterilecek resmin yolunu veya bağlantısını belirtir. Bu, resmin kaynağıdır. alt özniteliği ise resim herhangi bir sebeple yüklenemezse ya da ekran okuyucu kullanan bir kullanıcı siteyi ziyaret ederse, resmin yerine gösterilecek açıklayıcı metindir. Bu özellik, hem erişilebilirlik hem de SEO açısından oldukça önemlidir.
+
+          HTML’de < img > etiketi kapatılmayan, yani kendi kendine kapanan bir etikettir. Kullanımı oldukça basittir. Örneğin bir manzara resmi göstermek için < img src="manzara.jpg" alt="Doğa manzarası" > şeklinde bir kod yazılır. Ek olarak resmin boyutlarını belirlemek için width ve height öznitelikleri kullanılabilir. Örneğin < img src="manzara.jpg" alt="Doğa manzarası" width="300" height="200" > kodu ile görselin genişliği ve yüksekliği ayarlanabilir. Kullanıcı dostu olması açısından title özniteliği de eklenerek resmin üzerine gelindiğinde kısa bir açıklama gösterilebilir.
+
+          Web sayfalarında görseller kullanılırken dosya boyutlarına dikkat edilmelidir. Çok büyük resimler sayfanın yavaş yüklenmesine neden olur ve kullanıcı deneyimini olumsuz etkiler. Ayrıca responsive yani mobil uyumlu tasarımlarda resimlerin doğru bir şekilde boyutlandırılması gerekir. Bu sayede farklı ekran boyutlarında sayfa düzeni bozulmadan görseller düzgün görüntülenir.
+
+          Sonuç olarak, HTML’de < img > etiketi ile görseller kolayca sayfalara eklenebilir ve doğru kullanıldığında web sitelerinin görselliğini ve etkisini artırır. Görseller, metinleri destekleyen ve kullanıcıya daha zengin bir deneyim sunan önemli bir unsurdur.
+        </p>
+      </div>
+
+      <div id="liste-turleri" class="icerik-alani">
+        <h2>Liste Türleri</h2>
+        <p>
+          HTML’de içerikleri sıralamak, gruplamak veya maddeler halinde sunmak için liste yapıları kullanılır. Listeler, bilgileri düzenli ve okunabilir bir biçimde sunmak için önemli bir araçtır. Web sayfalarında menüler, yapılacaklar listeleri, özellikler veya adım adım açıklamalar gibi birçok alanda listelerden yararlanılır.
+
+          HTML'de üç temel liste türü bulunur: sırasız liste, sıralı liste ve tanımlama listesi. Sırasız liste < ul > (unordered list) etiketi ile oluşturulur ve öğeler noktalarla gösterilir. Bu liste türü, öğelerin belirli bir sıraya sahip olmadığı durumlarda kullanılır. Sıralı liste ise < ol > (ordered list) etiketi ile hazırlanır ve liste öğeleri numaralandırılır. Bu liste türü, öğelerin belirli bir sıraya göre sunulması gerektiğinde tercih edilir. Her iki liste türünde de liste öğeleri < li > (list item) etiketi ile tanımlanır.
+
+          Örneğin bir sırasız liste şu şekilde yazılır: < ul >< li >Elma</>< li >Armut</></>. Bir sıralı liste ise şöyle oluşturulur: < ol >< li >Birinci Adım</>< li >İkinci Adım</></>. Bu iki liste türü dışında daha az kullanılan ancak bazı durumlarda faydalı olan tanımlama listeleri de vardır. Tanımlama listeleri < d l> etiketi ile başlar, her terim < d > etiketi ile yazılır ve açıklaması < dd > etiketiyle belirtilir.
+
+          Liste öğelerinin görünümleri CSS ile şekillendirilebilir. İstenirse liste işaretleri kaldırılabilir veya farklı stiller uygulanabilir. Ayrıca listeler içerisine resim, bağlantı veya başka HTML öğeleri eklenerek zenginleştirilebilir.
+
+          Listeler, bilginin kolay anlaşılır, düzenli ve yapılandırılmış bir şekilde sunulmasını sağlar. Bu nedenle kullanıcı deneyimini artırmak ve sayfanın okunabilirliğini güçlendirmek için listeler yaygın olarak kullanılır.
+        </p>
+      </div>
+
+      <div id="html-yapisi" class="icerik-alani">
+        <h2>HTML Yapısı & Bloklar</h2>
+        <p>HTML’de bir web sayfasının iskeletini oluşturmak için temel bir yapıya ihtiyaç vardır. Bu yapı, sayfanın nasıl görüneceğini ve hangi bölümlerden oluşacağını belirler. Her HTML sayfası, belirli etiketlerin bir araya gelmesiyle oluşur ve bu etiketler sayfanın içeriğini, düzenini ve işlevini belirler.
+
+          Bir HTML belgesi, < !DOCTYPE html > bildirimi ile başlar. Bu bildirim, tarayıcıya sayfanın HTML5 standardına göre yazıldığını gösterir. Ardından gelen < html > etiketi, sayfanın tüm içeriğini kapsayan ana etikettir. Bu etiketin içinde iki temel bölüm bulunur: < head > ve < body >.
+
+          < head > bölümü, sayfanın kullanıcıya doğrudan görünmeyen kısmıdır. Burada sayfanın başlığı, karakter seti, CSS dosyaları, meta etiketleri gibi bilgiler yer alır. Sayfanın görünür içeriği ise < body > etiketi içinde bulunur. Bu kısımda metinler, görseller, bağlantılar, listeler ve diğer tüm görsel unsurlar yer alır.
+
+          HTML sayfalarında içerikler iki ana kategoriye ayrılır: blok düzeyindeki (block-level) ve satır içi (inline) öğeler. Blok düzeyindeki öğeler, her zaman yeni bir satırda başlar ve genişlik olarak mümkün olan tüm alanı kaplar. Örneğin < div >, < p >, < h1 >, < ul > gibi etiketler blok öğelerdir. Satır içi öğeler ise bulunduğu satır içinde devam eder ve sadece gerektiği kadar alan kaplar. Örneğin < span >, < a >, < strong > gibi etiketler satır içi öğelerdir.
+
+          Blok yapılar, sayfa düzenini oluşturmak için en yaygın kullanılan yapılardır. Özellikle < div > etiketi, içerikleri gruplamak ve CSS ile şekillendirmek için sıklıkla tercih edilir. Bu sayede sayfa bölümleri mantıklı ve düzenli bir şekilde organize edilir.
+
+          HTML yapısının doğru kurulması, hem sayfanın düzenini hem de erişilebilirliğini ve SEO değerini doğrudan etkiler. Sayfanın mantıklı bir akışa sahip olması, hem kullanıcı deneyimi hem de arama motorları açısından önemlidir.</p>
+      </div>
+
+      <div id="div-span" class="icerik-alani">
+        <h2>Div & Span Kullanımı</h2>
+        <p>HTML’de sayfa içindeki içerikleri gruplamak, düzenlemek ve istenilen bölümleri birbirinden ayırmak için < div > ve < span > etiketleri kullanılır. Bu iki etiket, temel yapı taşlarıdır ve özellikle CSS ile sayfa tasarımı yapılırken büyük önem taşır.
+
+          < div > (division) etiketi, blok düzeyinde bir elementtir. Yani her zaman yeni bir satırda başlar ve tüm yatay alanı kaplar. Genellikle birden fazla öğeyi bir araya toplamak, sayfa bölümleri oluşturmak ve CSS ile bu bölümlere stil vermek için kullanılır. Tek başına görsel bir etkisi yoktur; görünümünü tamamen CSS ile şekillendirebilirsin. Örneğin bir haber kutusu, içerik bölümü veya bir form alanı oluşturmak için < div > etiketi tercih edilir.
+
+          Buna karşılık < span > etiketi satır içi (inline) bir elementtir. Bulunduğu satırın içinde kalır ve metnin sadece belirli bir kısmını veya küçük bir öğeyi gruplamak için kullanılır. Genellikle metnin bir kısmını renklendirmek, kalınlaştırmak, italik yapmak gibi görsel değişiklikler için CSS ile birlikte kullanılır. < span > de tıpkı < div > gibi tek başına görsel bir etki oluşturmaz.
+
+          Özetle, < div > sayfanın geniş alanlarını, blok yapısını oluşturmak için; < span > ise satır içindeki küçük alanları düzenlemek için kullanılır. Her iki etiket de CSS ile tam anlamıyla işlevsel hale gelir. Doğru kullanıldıklarında, sayfanın düzeni, okunabilirliği ve tasarımı üzerinde büyük bir etkileri vardır.</p>
+      </div>
+
+      <div id="yapi-etiketleri" class="icerik-alani">
+        <h2>Yapı Etiketleri</h2>
+        <p>HTML’de bir web sayfasını daha anlamlı ve düzenli hale getirmek için kullanılan etiketlere yapı etiketleri ya da diğer adıyla semantik etiketler denir. Bu etiketler, içeriğin ne anlama geldiğini hem tarayıcılara hem de arama motorlarına açık bir şekilde ifade eder. Böylece sayfanın okunabilirliği, erişilebilirliği ve SEO performansı artar.
+
+            Semantik etiketler, sadece görsel bir düzen sağlamakla kalmaz, aynı zamanda sayfanın yapısını da net bir şekilde tanımlar. Bu etiketler sayesinde kullanıcılar ve yazılımlar sayfa içindeki bölümlerin ne işe yaradığını kolayca anlayabilir.
+
+            En yaygın kullanılan yapı etiketleri arasında < header >, < nav >, < main >, < section >, < article >, < aside > ve < footer > bulunur. Örneğin < header > sayfanın veya bir bölümün üst kısmını tanımlar; genellikle logo, başlık veya menü içerir. < nav > etiketi, sayfanın gezinme menüsünü tanımlar. < main >, sayfanın ana içeriğini belirtirken, < section > mantıksal bir bölüm oluşturmak için kullanılır. < article > bağımsız, kendi başına anlamlı içerik alanlarını tanımlar. Yan bilgiler için < aside >, sayfanın en alt kısmı için ise < footer > etiketi kullanılır.
+
+            Yapı etiketleri sayesinde web sayfaları hem görsel olarak daha düzenli hem de teknik olarak daha güçlü hale gelir. Ayrıca ekran okuyucu kullanan ziyaretçiler için de büyük kolaylık sağlar. Bu etiketlerin CSS ile şekillendirilmesi mümkündür ve genellikle sayfa tasarımının temelini oluştururlar.
+
+            Doğru yapı etiketlerini kullanmak, modern web tasarımının önemli bir parçasıdır ve her web geliştiricinin mutlaka bilmesi gereken bir konudur.</p>
+      </div>
+
+      <div id="sayfa-bolumleri" class="icerik-alani">
+        <h2>Sayfa Bölümleri</h2>
+        <p>HTML’de bir web sayfasını anlamlı ve düzenli parçalara ayırmak için sayfa bölümleri oluşturulur. Sayfa bölümleri, içeriğin hem kullanıcılar hem de tarayıcılar tarafından daha kolay anlaşılmasını ve yönetilmesini sağlar. Bu bölümler sayesinde sayfanın farklı kısımları birbirinden ayrılır ve her bir bölüm kendi işlevine göre yapılandırılır.
+
+          Bir web sayfası genellikle başlık, gezinme menüsü, ana içerik, yan içerik ve alt bilgi gibi farklı bölümlerden oluşur. Bu bölümleri oluşturmak için HTML'de çeşitli semantik yapı etiketleri kullanılır. Örneğin sayfanın en üst kısmı < header > etiketi ile tanımlanır ve genellikle logo, site başlığı veya menü içerir. Sayfanın navigasyon kısmı < nav > etiketi ile, ana içerik kısmı ise < main > etiketi ile tanımlanır.
+
+          Bir içeriğin mantıklı bir parçasını belirtmek için < section >, bağımsız bir yazı, haber veya blog gönderisi gibi içerikleri tanımlamak için < article > kullanılır. Yan içerik veya ek bilgiler için < aside >, sayfanın alt bilgi kısmı için ise < footer > etiketi kullanılır. Bu bölümler, hem sayfanın yapısını güçlendirir hem de CSS ile kolayca biçimlendirilebilir.
+
+          Sayfa bölümleri oluşturmak, hem kullanıcıların içeriği rahatça taramasına yardımcı olur hem de geliştiriciler için sayfanın kod yapısını okunabilir ve yönetilebilir hale getirir. Aynı zamanda arama motorları bu yapıları daha iyi anlayarak sayfanın içeriğini doğru bir şekilde indeksler.
+
+          Düzenli ve anlamlı sayfa bölümleri, kullanıcı deneyimini artırır, erişilebilirliği geliştirir ve web standartlarına uygun bir yapı kazandırır.</p>
+      </div>
+
+      <div id="tablolar" class="icerik-alani">
+        <h2>Tablolar</h2>
+        <p>
+          HTML’de verileri düzenli bir şekilde satırlar ve sütunlar halinde göstermek için tablolar kullanılır. Tablolar, genellikle sayısal verileri, istatistikleri, karşılaştırmaları veya düzenli bilgi listelerini göstermek için tercih edilir. Tablo oluşturmak için HTML'de < table > etiketi kullanılır.
+
+          Bir tablonun temel yapısı, satırları ve sütunları tanımlayan etiketlerden oluşur. < tr > etiketi (table row) tablo satırlarını belirtirken, her satırın içinde bulunan hücreler < td > (table data) etiketi ile oluşturulur. Eğer tabloya başlık eklenmek istenirse, veri hücreleri yerine < th > (table header) etiketi kullanılır ve bu başlık hücreleri genellikle kalın ve ortalanmış olarak görüntülenir.
+
+          Basit bir tablo şu şekilde oluşturulur: Önce < table > etiketi açılır, ardından her bir satır < tr > etiketi ile tanımlanır ve satır içindeki hücreler < td > veya < th > etiketleri ile doldurulur. Tabloya kenarlık, arka plan rengi, yazı stili gibi görsel özellikler eklemek için CSS kullanılır.
+
+          Örneğin, bir ürün listesi, ders programı veya fiyat tablosu gibi birçok bilgi tablo şeklinde sunulabilir. Ancak tablolar yalnızca düzenli veri sunmak için kullanılmalıdır. Sayfa düzenini sağlamak veya görsel öğeleri yerleştirmek için tablo kullanımı modern web standartlarında önerilmez.
+
+          Doğru kullanıldığında tablolar, bilgileri düzenli, anlaşılır ve erişilebilir bir biçimde sunar. Aynı zamanda ekran okuyucular ve arama motorları tarafından da kolayca algılanır. Karmaşık tablolar oluştururken başlıkları, hücreleri ve tabloları mantıklı bir yapı içinde düzenlemek hem kullanıcı deneyimi hem de erişilebilirlik açısından büyük önem taşır.
+        </p>
+      </div>
+
+      <div id="form-elementleri" class="icerik-alani">
+        <h2>HTML Form Elementleri</h2>
+        <p>HTML’de kullanıcıdan veri almak, etkileşim sağlamak ve bilgileri toplamak için formlar kullanılır. Formlar, web sayfalarının dinamik ve etkileşimli hale gelmesini sağlar. Bir form oluşturmak için < form > etiketi kullanılır ve bu formun içerisine çeşitli form elementleri eklenerek kullanıcıdan giriş yapılması sağlanır.
+
+          Formlar, kullanıcıların isim, e-posta, şifre gibi bilgileri girmesini, seçimler yapmasını veya dosya yüklemesini mümkün kılar. Bu bilgilerin toplanıp işlenmesi için formun genellikle bir sunucuya gönderilmesi gerekir. Formların gönderim işlemi, < form > etiketinin action ve method öznitelikleri ile tanımlanır. action gönderilecek adresi, method ise gönderim şeklini (GET veya POST) belirtir.
+
+          Formların içerisinde en çok kullanılan form elementleri şunlardır:
+          Metin girişleri için < input type="text" >, şifre girişleri için < input type="password" >, çok satırlı metinler için < textarea >, seçim kutuları için < select > ve seçeneklerin listelendiği < option > etiketleri. Ayrıca kutucuklar için < input type="checkbox" > ve radyo butonları için < input type="radio" > kullanılır. Formun gönderilmesini sağlamak için ise < input type="submit" > veya < button > etiketleri tercih edilir.
+
+          Form elementleri kullanıcı deneyimi açısından oldukça önemlidir. Formların kolay anlaşılır, erişilebilir ve doğru şekilde yapılandırılmış olması, kullanıcının işlem yaparken rahat hissetmesini sağlar. Ayrıca formların görselliği de CSS ile iyileştirilerek daha modern ve şık hale getirilebilir.
+
+          Doğru bir şekilde oluşturulan HTML formları, kullanıcıdan alınan verilerin sağlıklı şekilde toplanmasını ve işlenmesini sağlar. Web sitelerinde iletişim formları, kayıt formları, giriş formları gibi birçok farklı alanda yaygın şekilde kullanılır.</p>
+      </div>
+
+      <div id="form-giris" class="icerik-alani">
+        <h2>Form Giriş Alanları</h2>
+        <p>HTML formlarında kullanıcıdan bilgi almak için kullanılan en temel yapı form giriş alanlarıdır. Bu alanlar, kullanıcının metin, sayı, e-posta, parola gibi bilgileri girmesine imkân tanır. Giriş alanları, < input > etiketi ile oluşturulur ve type özniteliği kullanılarak farklı veri türlerine göre şekillendirilir.
+
+        En yaygın kullanılan giriş alanı < input type="text" > ifadesidir. Bu, kullanıcıdan serbest metin almak için kullanılır. İsim, soyisim, kullanıcı adı gibi alanlar bu tür girişlerle oluşturulur. Eğer kullanıcıdan gizli bir bilgi, örneğin bir parola alınacaksa < input type="password" > kullanılır. Bu tür girişlerde yazılan karakterler güvenlik amacıyla yıldız veya nokta şeklinde gösterilir.
+
+        Eğer kullanıcıdan uzun metinler alınması gerekiyorsa, örneğin bir açıklama veya yorum alanı isteniyorsa, < textarea > etiketi tercih edilir. Bu alanlar çok satırlıdır ve geniş metin girişine izin verir. E-posta almak için < input type="email" >, telefon numarası için < input type="tel" >, sayısal veri almak için ise < input type="number" > gibi farklı türde giriş alanları kullanılabilir.
+
+        Form giriş alanlarına kullanıcı dostu olmak adına placeholder (yer tutucu) metinler eklenebilir. Bu metinler, kullanıcıya hangi bilgiyi girmesi gerektiğini gösterir. Ayrıca formların daha güvenli ve kullanıcı dostu olması için label etiketleri ile her giriş alanı açıklanmalıdır. Örneğin bir isim alanı şöyle oluşturulur:
+        < label for="ad">Adınız:</> < input type="text" id="ad" name="ad" >
+
+        Giriş alanlarının düzeni, genişliği, rengi ve yazı tipi gibi görsel özellikleri CSS ile tamamen özelleştirilebilir. Doğru kullanıldığında, form giriş alanları web sitelerinde kayıt, giriş, iletişim gibi pek çok işlem için hayati öneme sahiptir.</p>
+      </div>
+
+      <div id="butonlar" class="icerik-alani">
+        <h2>Butonlar & CheckBox</h2>
+        <p>HTML formlarında kullanıcı etkileşimini sağlamak ve belirli işlemleri gerçekleştirmek için butonlar ve checkboxlar (onay kutuları) kullanılır. Bu iki form elemanı, kullanıcıdan seçim almak ve işlemleri başlatmak için en yaygın kullanılan araçlardandır.
+
+          Butonlar, bir formu göndermek, bir işlemi başlatmak veya bir etkileşimi tetiklemek için kullanılır. HTML'de buton oluşturmanın iki temel yolu vardır: < button > etiketi veya < input type="submit" > etiketi. Butonların içine metin, ikon veya görsel eklenebilir ve CSS ile tamamen özelleştirilebilir. Örneğin bir formun gönder butonu < button type="submit">Gönder</> şeklinde yazılır. Bunun dışında, sayfa içinde farklı işlemler için type="button" türünde butonlar da kullanılabilir.
+
+          Checkboxlar (onay kutuları) ise kullanıcıya birden fazla seçeneği seçme imkânı verir. Checkboxlar < input type="checkbox" > etiketi ile oluşturulur. Kullanıcı birden fazla kutuyu işaretleyebilir veya boş bırakabilir. Örneğin kullanıcı bir formda “Şartları kabul ediyorum” seçeneğini işaretlemek için checkbox kullanır. Etiket açıklaması ile birlikte kullanıldığında daha anlamlı olur:
+          < label >< input type="checkbox" > Şartları kabul ediyorum</>
+
+          Checkboxların bir diğer özelliği de istenirse varsayılan olarak işaretli (checked) hale getirilebilmesidir. Bu sayede kullanıcıya önceden seçili bir tercih sunulabilir.
+
+          Butonlar ve checkboxlar, web sayfalarının etkileşimli hale gelmesini sağlar. Özellikle formlarda kullanıcıdan onay almak, tercih belirtmek veya işlemleri başlatmak için vazgeçilmezdir. Doğru şekilde kullanıldıklarında hem kullanıcı deneyimini artırır hem de web sayfasının işlevselliğini güçlendirir.</p>
+      </div>
+
+      <div id="form-etiketleri" class="icerik-alani">
+        <h2>Form Etiketleri</h2>
+        <p>HTML formlarında, kullanıcıdan alınan verilerin daha anlaşılır, düzenli ve erişilebilir olmasını sağlamak için form etiketleri kullanılır. Bu etiketlerin temel amacı, her bir form elemanının ne işe yaradığını açıklamak ve kullanıcıya rehberlik etmektir. Bu sayede formlar daha kullanışlı ve profesyonel bir görünüme kavuşur.
+
+            Form etiketlerinde en sık kullanılan yapı < label> etiketidir. Label, bir form elemanının adını veya açıklamasını belirtmek için kullanılır. Kullanıcıların hangi bilgiyi nereye yazacağını anlamaları açısından oldukça önemlidir. Aynı zamanda erişilebilirlik için de vazgeçilmezdir, çünkü ekran okuyucular bu etiketleri algılayarak kullanıcıya bilgi verir.
+
+            Label etiketleri, genellikle bir giriş alanı ile ilişkilendirilir. Bunun için for özniteliği kullanılır. for özniteliğinin değeri, etiketin ilişkilendirildiği giriş elemanının id değeri ile aynı olmalıdır. Örneğin bir ad-soyad giriş alanı şu şekilde yazılır:
+            < label for="ad">Adınız:</> < input type="text" id="ad" name="ad">
+
+            Bu yapı sayesinde kullanıcı, etiket metnine tıklasa bile giriş alanı aktif hale gelir. Bu, özellikle mobil cihazlarda kullanıcı deneyimini önemli ölçüde iyileştirir. Label etiketlerinin yanında, form yapısında fieldset ve legend gibi yardımcı etiketler de bulunur. Fieldset, ilgili form elemanlarını bir grup içinde toplarken, legend bu grubun başlığını tanımlar. Özellikle uzun ve karmaşık formlarda fieldset yapısı, görsel düzeni korumak ve okunabilirliği artırmak için kullanılır.
+
+            Form etiketleri, sadece görsel anlamda değil, aynı zamanda erişilebilirlik ve kullanıcı deneyimi açısından da kritik bir role sahiptir. Anlamlı ve doğru kullanılan etiketler, formların daha anlaşılır, düzenli ve profesyonel görünmesini sağlar.</p>
+      </div>
+
+      <div id="form-gonderme" class="icerik-alani">
+        <h2>Form Gönderme</h2>
+        <p>HTML formlarının en temel amacı, kullanıcıdan alınan verileri bir sunucuya göndermek ve işlenmesini sağlamaktır. Bu işlem form gönderme olarak adlandırılır. Form gönderme işlemi, kullanıcının form üzerinde gerekli alanları doldurup bir gönderim butonuna tıklamasıyla gerçekleşir.
+
+          Bir formu göndermek için HTML'de < form> etiketi kullanılır ve bu etiketin içerisine form elemanları yerleştirilir. Formun nasıl ve nereye gönderileceğini belirlemek için < form> etiketinde iki önemli öznitelik bulunur: action ve method.
+          action özniteliği, formun gönderileceği sunucu adresini belirtir.
+          method özniteliği ise verinin nasıl gönderileceğini belirler. Burada genellikle iki seçenek kullanılır:
+
+          GET: Veriler URL üzerinden gönderilir, arama formları gibi basit işlemlerde tercih edilir.
+
+          POST: Veriler gizli bir şekilde gönderilir, kayıt formları gibi hassas bilgilerde kullanılır.
+
+          Formun gönderilmesini sağlamak için genellikle < input type="submit"> veya < button type="submit"> etiketleri kullanılır. Kullanıcı bu butona tıkladığında form içerisindeki tüm veriler belirtilen adrese gönderilir.
+
+          Form gönderme işlemi sadece HTML ile sınırlı değildir. JavaScript ile form gönderimi kontrol edilebilir, doğrulama yapılabilir veya gönderim işlemi iptal edilebilir. Özellikle günümüz web sitelerinde form gönderme işlemleri genellikle arka planda yapılır ve kullanıcıya daha akıcı bir deneyim sunar.
+
+          Form gönderimi, web sitelerinin kullanıcılarla etkileşime girmesini sağlayan en temel yapı taşlarından biridir. İyi yapılandırılmış ve doğru çalışan bir form, hem kullanıcı deneyimini iyileştirir hem de sitenin işlevselliğini artırır.</p>
+      </div>
+
+      <div id="hosgeldin" class="icerik-alani" style="display: block;">
+        <h2>Hoşgeldin!</h2>
+        <p>Soldan bir konu seç.</p>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <h3>Made by Burak Akgün</h3>
+  </footer>
+
+  <script>
+    function showDiv(divId) {
+      const divs = document.querySelectorAll('.icerik-alani');
+      divs.forEach(div => div.style.display = 'none');
+      document.getElementById(divId).style.display = 'block';
+    }
+  </script>
+
+</body>
+</html>
