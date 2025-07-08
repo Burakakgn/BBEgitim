@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML Öğretici</title>
+    <link rel="stylesheet" href="css.css">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4413036222011222"
+     crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <header>
+      <img
+        src="img/cssicon.svg"
+        width="150px"
+        height="140px"
+        alt=""
+      />
+      <h1>&lt; CSS /&gt;</h1>
+      <p>LightTheme</p>
+      <p><a href="#">TR</a> / <a href="#">EN</a></p>
+    </header>
+
+    <nav>
+      <a href="index.html">Ana Sayfa</a>
+      <a href="html.html">HTML</a>
+      <a href="css.html">CSS</a>
+    </nav>
+
+    <div class="tümiçerik">
+      <div class="sidebar">
+        <a href="#" onclick="showDiv('css-giris')">CSS’e Giriş</a>
+        <a href="#" onclick="showDiv('baslik-etiketleri')">CSS Seçiciler</a>
+        <a href="#" onclick="showDiv('paragraf-etiketi')">Renkler & Arka Planlar</a>
+        <a href="#" onclick="showDiv('linkler')">Yazı Tipi & Metin Stilleri</a>
+        <a href="#" onclick="showDiv('resim-ekleme')"> Kutu Modeli (Box Model)</a>
+        <a href="#" onclick="showDiv('liste-turleri')">Margin & Padding</a>
+        <a href="#" onclick="showDiv('html-yapisi')">Border & Border-Radius</a>
+        <a href="#" onclick="showDiv('div-span')">Gölge Efektleri (Box Shadow & Text Shadow)</a>
+        <a href="#" onclick="showDiv('yapi-etiketleri')"> Display & Visibility</a>
+        <a href="#" onclick="showDiv('sayfa-bolumleri')">Flexbox</a>
+        <a href="#" onclick="showDiv('tablolar')">Grid</a>
+        <a href="#" onclick="showDiv('form-elementleri')"
+          >Responsive Tasarım (Media Queries)</a
+        >
+        <a href="#" onclick="showDiv('form-giris')">CSS Animasyonları (@keyframes & transition)</a>
+        <a href="#" onclick="showDiv('butonlar')"> Pseudo Class’lar & Pseudo Elementler</a>
+      </div>
+
+      <div class="içerik" id="content">
+        <div id="css-giris" class="icerik-alani">
+          <h2>CSS'e Giriş</h2>
+          <p>
+            Ey kral! <br />
+            HTML'i yazdın, güzel... Ama bir sıkıntı var: Sayfa kupkuru, ruhsuz,
+            sanki köyden yeni gelmiş gibi sade. İşte o ruhu, şekli, şemali CSS
+            verir! Yani sitenin Saçıdır, sakalıdır
+          </p>
+          <h2>CSS Ne Demek?</h2>
+          <p>
+            Açılımı: “Cascading Style Sheets” Türkçesi Basamaklı Stil Şablonları
+          </p>
+          <h2>CSS Ne İşe Yarar?</h2>
+          <p>
+            ✅Renk verir: Sayfaya renk katar <br />✅Font değiştirir: Yazıyı
+            sıklaştırır,süsler <br />✅Kutulara şekil verir: Border, Shadow,
+            Radius ne istersen... <br />✅Sayfayı ortalar, hizalar, kısacası
+            ADAM EDER!
+          </p>
+          <h2>CSS Nasıl Eklenir</h2>
+          <p>CSS üç Şekilde eklenebilir <br> <br> 
+            <ol>
+              <li>
+                İnline CSS:Acil durumlarda çaktırmadan yapılan değişiklikler. 
+                direkt etiketin içine yazılır mesela &lt;p style="color:red;"&gt; 
+                <br> Ama fazla yapılması tavsiye  edilmez ileri seviye projelerde 
+                karışıklığa neden olur
+              </li> <br>
+              <li>
+                İnternal CSS: Kafa karıştırmaz ama büyük projelerde karışıklığa 
+                sebep olabilir head kodu içerisine style ile yazılır 
+              </li> <br>
+              <li>
+                External CSS: Kral işi budur. Ayrı bir .css dosyasına yazılır, 
+                tertemiz... HTML dosyasına uygulamak içinse head içerisine 
+                &lt;link rel="stylesheet" href="style.css"&gt; yazarak uygulanır
+                style içerisine kodlar örnegin şu şekilde yazılır <br> p { <br> Color:red; <br> } 
+              </li>
+            </ol>
+          </p>
+        </div>
+
+        <div id="baslik-etiketleri" class="icerik-alani">
+          <h2>CSS Seçiciler</h2>
+          <p>
+            CSS Seçiciler, HTML sayfasında hangi elemanın süsleneceğini belirlemek için 
+            kullanılır. Düşün ki kalabalık bir ortamdasın ve birine sesleneceksin. Doğru kişiyi
+            seçmezsen ya kimse dönüp bakmaz ya da yanlış kişiye laf gitmiş olur. CSS’de de 
+            aynı mantık geçerli.
+          </p>
+          <h2>Temel Seçiciler</h2>
+            <ol>
+              <li>
+                <h3>Etiket Seçici</h3>örnegi: <br> p { <br> Color:red; <br> }  <br> Burada sayfamız 
+                içerisindeki tüm p etiketlerine kırmızı rengi verdik
+              </li> <br>
+              <li>
+                <h3>Class Seçici</h3>Noktayla seçilir örnegin <br> .kral { <br> color:blue; <br> font-weight:bold;
+                <br> } <br> 
+                Burada sayfamız içerisinde sadece kral class'ına sahip olan etiketi seçtik yani
+                yazdıgımız kodlar sadece o etikete uygulanacak <br><br> diyelim sayfamızdaki bir p etiketini 
+                digerlerinden farklı bir renk yapmak istiyoruz bunun için o etikete bir class
+                vermeliyiz örnegin <br> &lt;p class="kral"&gt;Bu bir paragraf&lt;/p&gt;
+              </li> <br>
+              <li>
+                <h3>ID Seçici</h3>eşsizdir yani bir sayfada aynı ID'ye sahip tek bir etiket olabilir 
+                ID "#" işaretiyle yazılır aşagıda örnek bir ID ve  etiket içerisinde yazılışı 
+                verilmiştir <br>
+                #ozel { <br> color:red; <br> } <br> yukarıda sadece ozel ID'sıne sahip olan 
+                etiketi kırmızı yaptık etiket içerisinde uygulanışı ise şöyledir 
+                &lt;p id="ozel"&gt;Bu bir paragraf&lt;/p&gt;             
+              </li> <br>
+              <li>
+                <h3>Universal Seçici</h3> Yıldız "*" işareti ile kullanılır. Bu seçici sayfa içerisindeki 
+                  tüm etiketlere uygulanır genelde içerisinde şu üç kod bulunur <br>*{ <br>margin:0; <br>
+                  padding:0; <br> box-sizing:border-box; <br> } <br>
+              </li>
+            </ol>
+            <h2>Dikkat edilmesi gerekenler</h2>
+             <ul>
+              <li>Aynı ID'den sadece bir tane olabilir</li>
+              <li>Class birden çok olabilir</li>
+             </ul>
+        </div>
+
+        <div id="paragraf-etiketi" class="icerik-alani">
+          <h2>Renkler ve Arka Planlar</h2>
+          <p>
+            Kral, HTML yazdık, seçiciyi öğrendik… Ama bir sorun var:
+            Sayfa simsiyah beyaz, hani memur evine dönmüş gibi.
+            İşte burada CSS renkleri ve arka planları devreye girer.
+            Sayfayı renklendirir, şekillendirir, göz boyar—ama iyi anlamda
+          </p>
+          <h2>Renk Nasıl Verilir?</h2>
+          <ol>
+            <li>
+              <h3>İsimle Renk Verme</h3>
+              p { <br> color:red; <br> } <br>
+              Bu klasik isim verme şeklidir "red","blue","green" gibi direkt isimler kullanılır 
+            </li> <br>
+            <li>
+              <h3>Hex Kodlarıyla</h3>
+              h1 { <br> color:#ff6600; <br> } <br>
+              Burada işin rengi degişir: Her rengin bir #kodu vardır. <br> Dikkat! # Kullanmassak kod işe 
+              yaramaz
+            </li> <br>
+            <li>
+              <h3>RGB ile</h3>
+              div { <br> color: rgb(255,0,0); <br> } <br>
+              sırayla kırmızı, yeşil , maviyi temsil eder 
+            </li> <br>
+            <li>
+              <h3>RGBA</h3>
+              div { <br> color:rgba(255,0,0,0.5) <br> } <br>
+              Bu kodun RGB'den tek farkı şeffaflık ayarıdır aynı renk uygulanır sadece daha şeffaf haliyle
+              görünür
+            </li>
+          </ol>
+            <h2>Arka Plan Vermek</h2>
+            <ol>
+              <li>
+                <h3>Arka Plan Rengi Verme</h3> 
+                body { <br> background-color: #ff8800; <br> } <br>
+                body'nin arka plan rengini degiştirir
+              </li> <br>
+              <li>
+                <h3>Arka Plana Resim Koyma</h3> 
+                body { <br> background-image: url("resim.jpg"); <br> } <br>
+                url içerisinde yolunu belirledigimiz resmi arka planda açar
+              </li> <br>
+              <li>
+                <h3>Pozisyon ve Tekrar Ayarları</h3> 
+                body { <br> background-repeat: no-repeat; <br> background-position:center; <br>
+                background-size:cover; <br> } <br> 
+                şimdi tek tek yazdıgımız kodları açıklayalım  <br> <br>
+                Arka Plana yükledigimiz fotograf içerikten küçük olursa default olarak 
+                resim aynısını tekrar ederek içerigi doldurur genelde bunun olmasını istemeyiz bu yüzden 
+                no-repeat komutunu kullanırız yani resme tekrar etme deriz <br> <br> bir diger komut iste 
+                background-position:center komutu bu komut ismi gibi yükledimiz içerigi yazdıgımız etikette
+                ortalar <br> <br>
+                Son olarak background-size:cover bu komut ise yükledigimiz elemanın içerigi tamamen 
+                kaplamasını saglar
+              </li> <br>
+            </ol>
+        </div>
+
+        <div id="linkler" class="icerik-alani">
+          <h2>Yazı Tipi ve Metin Stilleri</h2>
+          <p>
+            Kral şimdi renkleri verdik, arka planları döşedik ama bir eksik var: YAZILAR! Yani o 
+            paragraf denen düz yazılar hâlâ lisede fotokopi notu gibi. Hadi gel şekil verelim.
+          <br></p>
+          <h3>Yazı Tipini Degiştirme</h3> 
+          <p>
+              body { <br> font-family: Arial, sans-serif; <br> } <br>
+              yani sayfadaki tüm yazıların yazı tipini Arial olarak degiştirdik 
+          </p>
+          <br><h3>Yazı Büyüklügünü Degiştirme</h3>
+          <p>
+            h1 {<br> font-size:36px; <br> } <br> Yukarıda sayfadaki tüm h1 etiketlerinin font Büyüklügünü
+            degiştirdik 
+          </p>
+          <br><h3>Yazı Kalınlıgı</h3>
+          <p>
+            h2 {<br> font-weight:bold; <br> } <br>
+            uygulandıgı içerikteki yazıyı kalın yapar default olarak normal'dir <br> daha kalın olmasını
+            istersek 100-900 arası sayılar verebiliriz (700=bold)
+          </p>
+          <br><h3>Yazı Stili</h3>
+          <p>
+            p {<br> font-style: italic; <br> } <br>
+            Yazıyı italik yapar 
+          </p>
+          <br><h3>Metin Dekorasyonu</h3>
+          <p>
+            a {<br> text-decoration:none; <br> } <br>
+            link etiketleri default olarak altı çizili yazılırlar text-decoration:none; alt çizgiyi 
+            kaldırmak için kullanılır <br> alta çizgi eklemek için none yerine underline yazılmalıdır
+          </p>
+          <br><h3>Metin Hizalama</h3>
+          <p>
+            p {<br> text-align: <br> } <br>
+            aşagıda örnek kullanılışı verilmiştir
+          </p>
+          <p style="border: 1px solid;">
+            <p style="text-align: left; border: 1px solid;">text-align:Left</p>
+            <p style="text-align: right; border: 1px solid;">text-align:Right</p>
+            <p style="text-align: center; border: 1px solid;">text-align:Center</p>
+            <p style="text-align: justify; border: 1px solid;">text-align:Justify</p>
+          </p>
+          <br><h3>Harflerle Oynama (Büyütme, Küçültme, Aralama)</h3>
+          <p>
+            p {<br> text-transform: uppercase; <br> letter-spacing: 2px; <br>} <br>
+            text-transform: Yazının hepsini büyük, küçük veya normal yapmak için kullanılır <br>
+            letter-spacing: Harfler arasını açar, metni ferahlandırır aşagıda text-transform ve
+            letter-spacing uygulanmış örnek bir metin bulunmaktadır 
+            <p style="text-transform: uppercase; letter-spacing: 5px;">Ben bir paragrafım</p>
+            <p>
+              yukarıdaki paragrafta letter-spacing 5px verildi bu yüzden aralık çok fazla 
+              göründü ayrıca text-transform:uppercase; kullanıldı
+            </p>
+          </p>
+        </div>
+
+        <div id="resim-ekleme" class="icerik-alani">
+          <h2>Kutu Modeli</h2>
+          <p>
+            Kral, CSS dünyasında her şey bir kutu. Yazı da kutu, resim de kutu, buton da kutu…
+            Yani bildiğin dünya kutudan ibaret! (İlber Ortaylı gelse o da bunu derdi) <br>
+            Buna Box Model deniyor. Her element, görünmese de aslında bir kutu içinde duruyor. 
+            <h2>Kutu Modelinin Katmanları</h2>
+            <ol>
+              <li>
+                Content: Yazı,resim,ikon... Yani kutunun içindeki esas içerik
+              </li>
+              <li>
+                Padding: içerik ile kenarlar arasındaki mesafe
+              </li>
+              <li>
+                Border: Kutunun çevresindeki kenarlık
+              </li>
+              <li>
+                Margin: Kutunun dış dünyayla arasındaki mesafe. diger kutularla iç içe girmemesi 
+                için kullanılır
+              </li>
+            </ol>
+            <p>yukarıdaki anlatımın görselini görürsek çok daha iyi kavrayabiliriz</p>
+            <img src="img/cssboxmodel.png" width="100%" height="300px" alt="">
+            <p>
+              Son olarak Herkesin bilmesi gereken kod <br> box-sizing:border-box; <br> bunu yazarsak 
+              padding ve border kutunun dışına taşmaz. Bu yüzden her sayfanın olmazsa olmazıdır ve
+              bu yüzden her sayfanın başında "*" seçicisinde kullanılır
+            </p>
+          </p>
+        </div>
+
+        <div id="liste-turleri" class="icerik-alani">
+          <h2>Margin & Padding (Araya Mesafe Koyma Sanatı)</h2>
+          <p>
+            Kral bak, CSS'te her şeyin bir mesafesi, bir nefes alanı olmalı. Her kutu üst 
+            üste binip kavga ederse sayfan dağılır. İşte burada devreye margin ve 
+            padding giriyor.
+            <h2>Padding</h2>
+            <p>
+              p {<br> padding:20px; <br> } <br>
+            yazının etrafında yastık gibi boşluk oluşturur kodun yazılmış hali aşagıda bulunuyor
+            </p>
+            <p style="border: 1px solid; padding: 20px;">Benim Padding'im 20px</p>
+            <h2>Margin</h2>
+            <p>Kutunun diger kutulara veya sayfanın kenarına olan uzaklıgına denir</p>
+            <p>
+              div {<br> margin:30px <br> } <br> şimdi örnegi kullanalım 
+            <div style="margin: 30px; border: 1px solid;">Benim Margin'im 30px</div>
+            <p> Gördügümüz üzere içerikle diger tüm herşey arasında 30px boşluk bıraktı</p>
+            </p>
+            <p>şimdi aşagıda margin ve paddingi tanıtan bir tablo verelim</p>
+              <img src="img/marginpadding.png" alt="">
+              <p>Şimdi birde padding ve margini belli kısımlara yani sag,sol,yukarı ve aşagı uygulama
+                komutlarına geldik bu komutlar saat yönüne göre yazılır aşagıda örnek bir komut verdik
+                <br><br> padding: 10px 20px 15px 5px; yani <br> 10px yukarı <br>20px saga <br> 15px aşagı <br>
+                5px sola <br> padding uyguladık aynısı margin içinde kullanılır
+              </p>
+              <h2>Bonus</h2>
+              <p>Margin ile bir kutuyu ortalamak istersek <br> margin: 0 auto;<br> komutunu
+              kullanırız burada yukarı ve aşagıya 0 margin yanlara eşit miktarda margin olması 
+              gerektigin yazdık hatta aşagıda bir örnek'te verelim
+              </p>
+              <div style="border: 1px solid; margin: 0 auto; width: 150px;">Margin:0 auto;</div>
+          </p>
+        </div>
+
+        <div id="html-yapisi" class="icerik-alani">
+          <h2>Border ve Border-Radius</h2>
+          <p>
+            Kral, kutuyu koyduk, margin-paddingle ayarını yaptık ama… Bu kutu hâlâ sıska, 
+            ruhsuz, kenarsız bir kutu! İşte şimdi border ve border-radius ile kutuya can 
+            veriyoruz, şekil veriyoruz!
+          </p>
+          <h2>Border Nedir?</h2>
+          <p>Border = kutunun sınırları, çerçevesi, kenarı. yani "ben buradayım" diyen çizgi <br> 
+          </p>
+          <br><h3>Temel Yazımı</h3>
+          <p>
+            div {<br> border: 2px solid black <br> } <br>
+            Anlamı 
+            <ul>
+              <li>2px → Kalınlık</li>
+              <li>Solid → Düz çizgi(dashed, dotted gibi degerler'de verilebilir)</li>
+              <li>Black → Renk</li>
+            </ul>
+            <br><h3>Border Çeşitleri</h3> <br>
+            <p>
+              Solid → Düz çizgi <br> Dahsed → Kesik çizgi (----) <br> Dotted → Noktalı çizgi 
+            (o o o) <br> Double → Çift çizgi <br> none → Kenarsız 
+            </p> <br>
+          </p>
+          <p>Kenarları belirlerken hep tüm kısımlara göre yazdık ama istersek tek tek 
+            kenarlarıda ayarlayabiliriz mesela <br><br>
+            p { border-top: 3px dashed red;} <br>Sadece üst kenarı 3px ve kırmızı yapar<br> 
+            p { border-right: 2px solid blue;} <br>Sadece sag kenarı 2px ve mavi yapar <br>
+            p { border-bottom: 5px dotted green;} <br>Sadece alt kenarı 5px ve yeşil yapar <br>
+            p { border-left: none;} <br>eger başka bir kısıma kenar verdiysek sol kısımda 
+            kenar istemiyorsak bu şekilde yazabiliriz <br>
+          </p>
+          <h2>Border-Radius Nedir?</h2>
+          <p>Border-radius = Kutunun köşelerini yuvarlar, sert hatları yumuşatır <br> Aşagıda
+          Border radius verilmiş bir örnek bulunuyor
+          </p>
+          <p>div { <br> border-radius:20px; <br> } <br> </p>
+          <div style="border: 2px solid; border-radius: 20px; width: 200px; height: 
+          100px; text-align: center;">Border-radius:20px
+          </div>
+          <p>
+            istersek kutuyu border-radius:50%; ile tam yuvarlak'da yapabiliriz tıpkı aşagıdaki 
+            örnek gibi
+          </p> 
+          <div style="border: 1px solid; border-radius: 50%; width: 200px; 
+          height: 200px; text-align: center;">border-radius:50%;</div>
+        </div>
+        <div id="div-span" class="icerik-alani">
+
+          <h2>Gölge Efektleri</h2>
+          <p>
+            Kral, hayat gölgesiz olur mu? Olmaz. Gölge → Derinliktir, karizmadır, boyuttur. İşte
+            CSS’te de bu işi box-shadow ve text-shadow yapar. Bir kutuya, bir yazıya gölge 
+            verdin mi → Site bir anda 3D gibi olur, parmakla gösterirler.
+          </p>
+          <h2>Kutuya Gölge Verme</h2>
+          <p>div {<br> box-shadow:3px 5px 15px rgba(0,0,0,0.5) <br> } <br></p>
+          <div style="box-shadow: 3px 5px 15px rgba(0,0,0,0.5);">Gölgelendirilmiş kutu</div>
+          <p>Şimdi sırayla açıklayalım </p>
+          <ul>
+            <li>3px: Saga Kaydırma</li>
+            <li>5px: Aşagı Kaydırma</li>
+            <li>15px: Bulanıklık</li>
+            <li>rgba: Renk + Saydamlık </li>
+          </ul>
+          <h2>Box-Shadow İpuçları</h2>
+          <ul>
+            <li>
+              Dış Gölge box-shadow: 0 0 10px #333 <div style="box-shadow: 0 0 10px #333">
+                Dış Gölge</div>
+            </li>
+            <li>İç Gölge box-shadow: inset 0 0 10px #333
+               <div style="box-shadow: inset 0 0 10px #333">İç gölge</div>
+            </li>
+          </ul>
+          <p>İnset koyarsak içe dogru gölge verir, kutunun içi parlamış gibi olur.</p>
+          <h2>Text Shadow (Yazıya Gölge Verme)</h2>
+          <p>h2 { <br> text-shadow; 2px 2px 5px rgba(0,0,0,0.5) <br> } <br>
+            <h2 style="text-shadow: 2px 2px 5px rgba(0,0,0,0.5);">text-shadow; 2px 2px 5px rgba(0,0,0,0.5)</h2>
+            <p>Yazı bir anda daha net, daha çekici görünür  </p>
+            <h2>İlginç Gölge Kombinasyonları</h2>
+            <p>div {<br> box-shadow: 2px 2px 5px red, -2px -2px 5px blue; <br> } <br> 
+              <div style="box-shadow: 2px 2px 5px red, -2px -2px 5px blue;">
+              box-shadow: 2px 2px 5px red, -2px -2px 5px blue;
+              </div>
+              <p>Gölgelendirmelerde sırayla Saga ve aşagı  kodlarını yazarbiliyorduk aynı 
+                zamanda bunların negatif halinide yazabiliriz mesela 
+              </p>
+              <div style="box-shadow: 2px -5px 5px; border: 1px solid;">box-shadow: 2px -5px 5px ;</div> <br>
+              <div style="box-shadow: -2px 5px 5px; border: 1px solid;">box-shadow: -2px 5px 5px ;</div>
+            </p>
+          </p>
+        </div>
+
+        <div id="yapi-etiketleri" class="icerik-alani">
+          <h2>Display ve Visibility</h2>
+          <p>
+            Kral, CSS’te bazen bir şeyi göstermek istersin, bazen de “yokmuş gibi” davranmasını… 
+            İşte burada display ve visibility devreye girer. Biri görünürlüğü, diğeri davranışı 
+            kontrol eder. Bir nevi sitenin “ben varım ama yokum” ya da “yokum ama varım” 
+            havasını ayarlarsın 
+          </p>
+          <h2>En Meşhur Display Türleri</h2>
+          <p>
+            <ol>
+              <li>Block</li>
+              <p>Block display'li elementler her zaman tüm genişligi kaplarlar ve diger elemanları 
+                satır alta iterler mesela
+              </p>
+              <p style="display: block; border: 1px solid;">Display block bir paragraf</p>
+              <p>Paragraf zaten default olarak block displaya sahiptir block yapıya ayrıca sahip olan 
+                kodlar ise  &lt;div&gt;, &lt;p&gt;, &lt;h1&gt;'dir 
+              </p>
+              <li>İnline</li>
+              <p>yanyana gelebilen etiketlerdir örnegin &lt;span&gt;, &lt;a&gt;, &lt;strong&gt;
+                ... 
+              </p>
+              <span style="border: 1px solid;">İnline</span>
+              <a href="">İnline</a style="border: 1px solid;">
+              <strong style="border: 1px solid;">İnline</strong>
+              <p>Yukarıda 3 tane etiketi'de yanyana yazdık ama İnline elementler oldukları için yanyana 
+                sıralanabildiler şimdi denemek için block elementleri yanyana yazalım
+              </p>
+              <div style="border: 1px solid;">Block</div><p style="border: 1px solid;">Block</p>
+              <p>gördügünüz gibi block elementler tüm satırları kapladılar</p>
+              <li>İnline-block</li>
+              <p>Hem yan yana durup hem'de boyut alabilirler </p>
+               <div style="border: 1px solid; display: inline-block;">İnline-Block</div>
+               <p>
+                Yukarıdaki etiket block bir etiket olan div'di ama display:İnline-block; yaparak 
+                şeklini degiştirmiş olduk
+               </p>
+               <li>None</li>
+               <p>Son olarak None degerimiz var bu değer ismi gibi verdigimiz elemeti görünmez kılar 
+                Ne görünür ne de yer kaplar a 
+               </p>
+               <li>Visibility Nedir?</li>
+               <p>Visibility:hidden ile Elemanı görünmez yapabilir ama içerik kapladıgı yerde kalmaya 
+                devam eder yani içerik görünmez ama hala yer kaplamaya devam eder
+               </p>
+            </ol>
+          </p>
+        </div>
+
+        <div id="sayfa-bolumleri" class="icerik-alani">
+          <h2>Sayfa Bölümleri</h2>
+          <p>
+             <h2>Flexbox (Kutuları Dize Getirme Sanatı 🔥)</h2>
+          <p>Kral, Flexbox CSS’in kung-fu tekniğidir. Daha önce “bu kutular niye yan yana gelmiyor?” dedin mi? İşte cevabı burada: Flexbox. <br> Eskiden millet “float” falan kullanırdı, sonra Flexbox geldi, hepsi tarih oldu.Flexbox → Kutulara asker gibi hizaya gir der, onlar da itaat eder.
+          </p>
+          <h2>Flexbox Nasıl Başlar? (display: flex;)</h2>
+          <p>div { <br> display:flex; <br> } <br></p>
+          <p> Artık içindeki çocuklar inline gibi yan yana durur ama bir yandan da block gibi büyür küçülür. Çok yönlü, kral gibi davranırlar.
+          </p>
+          <h2>Ana Ayarlar</h2>
+          <ol>
+            <li>
+                <h4>
+                    justify-content: YATAY Hizalama (Sağa, Sola, ortaya )
+                </h4>
+                <div style="display: flex; justify-content: flex-start;border: 1px solid;">
+                    <div style="border: 1px solid;">justify-content: flex-start</div>
+                    <div style="border: 1px solid;">justify-content: flex-start</div>
+                    <div style="border: 1px solid;">justify-content: flex-start</div>
+                </div> <br>
+                <div style="display: flex; justify-content: flex-end;border: 1px solid;">
+                    <div style="border: 1px solid;">justify-content: flex-end</div>
+                    <div style="border: 1px solid;">justify-content: flex-end</div>
+                    <div style="border: 1px solid;">justify-content: flex-end</div>
+                </div> <br>
+                <div style="display: flex; justify-content: center;border: 1px solid;">
+                    <div style="border: 1px solid;">justify-content: center</div>
+                    <div style="border: 1px solid;">justify-content: center</div>
+                    <div style="border: 1px solid;">justify-content: center</div>
+                </div> <br>
+                <div style="display: flex; justify-content: space-between; border: 1px solid;">
+                    <div style="border: 1px solid;">justify-content: space-between</div>
+                    <div style="border: 1px solid;">justify-content: space-between</div>
+                    <div style="border: 1px solid;">justify-content: space-between</div>
+                </div> <br>
+                <div style="display: flex; justify-content: space-around;border: 1px solid;">
+                    <div style="border: 1px solid;">justify-content: space-around</div>
+                    <div style="border: 1px solid;">justify-content: space-around</div>
+                    <div style="border: 1px solid;">justify-content: space-around</div>
+                </div>
+                <p>Önemli olan şey display ile sıralamak istedigimiz elemanın parent elemanına yani kapsayan elemanına flex kodlarını uygularız elemanın kendisine display uygularsak hiçbirşey degişmez </p> <br> <p></p>
+            </li>
+            <li>
+                <h4>
+                    align-items → DİKEY Hizalama (Üst, alt, orta):
+                </h4>
+               <div style="display: flex; align-items: flex-start; height: 100px;border: 1px solid">
+                <div style="border: 1px solid">align-items: flex-start;</div>
+                <div style="border: 1px solid">align-items: flex-start;</div>
+                <div style="border: 1px solid">align-items: flex-start;</div>
+               </div> <br>
+               <div style="display: flex; align-items: flex-end; height: 100px;border: 1px solid">
+                <div style="border: 1px solid">align-items: flex-end;</div>
+                <div style="border: 1px solid">align-items: flex-end;</div>
+                <div style="border: 1px solid">align-items: flex-end;</div>
+               </div> <br>
+               <div style="display: flex; align-items: center; height: 100px;border: 1px solid">
+                <div style="border: 1px solid">align-items: center;</div>
+                <div style="border: 1px solid">align-items: center;</div>
+                <div style="border: 1px solid">align-items: center;</div>
+               </div> <p>Sonuç olarak Justify content yatay olarak Align items dikey olarak etki eder</p>
+            </li>
+            <li> 
+                <h4>
+                    flex-direction → Satır mı, sütun mu?
+                </h4>
+                <p>flex direction dizilme sırasını satır veya sütun olarak seçmemizi kolaylaştırır genelde menü yapımında kullanılır</p>
+                <div style="display: flex; flex-direction: column; height: 100px;border: 1px solid">
+                <div style="border: 1px solid">flex-direction: column;</div>
+                <div style="border: 1px solid">flex-direction: column;</div>
+                <div style="border: 1px solid">flex-direction: column;</div> 
+               </div> <br>
+               <div style="display: flex; flex-direction: row; height: 100px;border: 1px solid">
+                <div style="border: 1px solid">flex-direction: row;</div>
+                <div style="border: 1px solid">flex-direction: row;</div>
+                <div style="border: 1px solid">flex-direction: row;</div>
+               </div>
+            </li>
+          </ol>
+          </p>
+        </div>
+
+        <div id="tablolar" class="icerik-alani">
+          <h2>CSS Grid (Sayfa Düzenlemenin Ferrari’si 🏎️)</h2>
+          <p>Kral, Flexbox güzel, hoş ama bazen işler karmaşık.
+          Mesela: <br> 👉 Hem yatayda hem dikeyde düzgün dizmek istiyorsun… 
+          <br>👉 Ama kutular “abi biz oraya oturmuyoruz” diyor…
+          İşte burada Grid devreye giriyor.
+          CSS Grid = Sayfanın iskelet sistemini kurar.
+          Bir kere yaparsın → Sonra krallar gibi oturur.
+          </p>
+          <h2>Başlangıç: Grid’i Çağırmak</h2>
+          <p>div { <br> display:grid; <br> } <br></p>
+          <p>Bu kod → “Kardeşim burası grid artık, herkes sıraya girsin” demek.</p>
+          <h2>Kolonları ve Satırları Belirlemek </h2>
+          <p>div { <br>  display: grid; <br>
+          grid-template-columns: 1fr 1fr 1fr; <br>
+          grid-template-rows: auto auto; <br> }</p>
+          <p>Burada 3 kolon yaptın → Her biri 1fr (eşit pay). <br> 2 satır → Yükseklikleri otomatik.</p>
+          <h2>Kısa Kısa Grid Özellikleri:</h2>
+          <p>
+          ✅ grid-template-columns: Kolonları belirler. <br>
+          ✅ grid-template-rows: Satırları belirler. <br>
+          ✅ gap: Kutular arası boşluk (margin çekmek yok, gap at kral!) 
+          </p> <br>
+          <p>
+            Şimdi grid ile alakalı çok önemli bir noktaya geldik kral o da elemanları yerleştirmek 
+            şimdi yazdıgımız siteyi tarayıcı üzerinden incelerken grid yazdıgımız kısımlarda grid butonu
+            olur bu buton tablo şeklinde yaptıgımız grid'i gösterir elemanları yerleştirirkende bu 
+            tabloyu baz alırız <br> div {<br> grid-column: 1 / 3; /* 1'den başla, 3'e kadar uzat */ <br>
+          grid-row: 1 / 2; <br> } <br> Kuralı ise şöyledir önce elemanı seçeriz, daha sonra o elemanın 
+          uzamasını istedigimiz aralıgı yukarıdaki şekilde yazarız yani 1. column'dan 3. column'a kadar eleman
+          uzasın demek istiyoruz
+          </p>
+          
+        </div>
+
+        <div id="form-elementleri" class="icerik-alani">
+          <h2>Responsive Tasarım</h2>
+          <p>
+            Kral, bir site yaptın diyelim…
+            <ol>
+              <li>Telefonda kayıyor mu?</li>
+              <li>Tablette patlıyor mu?</li>
+              <li>Ekran küçülünce çirkinleşiyor mu?</li>
+            </ol>
+           <p> İşte Responsive Tasarım bu yüzden var.</p>
+            <h2>Temel Kural: “Mobil Dostu Olacaksın Kral!”</h2>
+            <ol>
+              <li>CSS ile %’lik genişlikler → width: 100%;</li>
+              <li>Flexbox & Grid → Esnek yapılar.</li> 
+              <li>Ama asıl kralı: Media Queries.</li> 
+            </ol>
+            <h2>Media Query Nedir?</h2>
+            <p>“Ekran şu boyuttaysa şunu yap, değilse dokunma.” Örnek</p>
+            <p>
+              @media (max-width: 768px) { <br>
+            body { <br>
+              background-color: lightblue; <br>
+            } <br>
+            } <br>
+            <p>Yukarıda yaptıgımız şey "Ekran 768px veya daha küçükse → Arka planı mavi yap."</p>
+            </p>
+            <h2>Sık Kullanılan Kırılma Noktaları (Breakpoints 📏)</h2>
+            <img src="img/2.png" alt="">
+          </p>
+        </div>
+
+        <div id="form-giris" class="icerik-alani">
+          <h2>CSS Animasyonları</h2>
+          <p>
+            Kral, şimdiye kadar sayfayı süsledik, kutuları dizdik, responsive yaptık ama… Bir eksik var: 
+            HAREKET! Sayfanın canlı durması lazım, ruhunu vermen lazım. İşte burada CSS Animasyonları 
+            devreye giriyor.
+            <h2>Geçiş (transition) ile Başlangıç</h2>
+            <p>
+              Basit hareketler için transition kullanırsın. Mesela hover’da yumuşak geçiş yapmak:
+            </p>
+            <div style="width: 100px; border: 1px solid;" class="hover">Hover</div>
+            <p>Yukarıdaki kutuya uyguladıgımız kodlar</p> <br>
+            <p> 
+              div { <br> background-color: blue; <br>transition: background-color 0.3s ease; <br> }
+            </p>
+            <p>ilk olarak normalde görünecegi rengi verdik (mavi) daha sonra hover ile üzerine gelindiginde
+              gösterecegi rengi verdik (kırmızı) 
+            </p> <br>
+            <p>div:hover {<br> background-color:red; <br> }</p>
+          </p>
+          <p>
+            <div class="kutu">Keyframes</div>
+            <p>Uyguladıgımız kodlar</p>
+            <img src="img/3.png" alt="">
+            <p>ilk olarak translateX ile X ekseni üzerinde yani düz eksende 0'dan (kendi yazılıgı yerden)
+              TranslateX eksenine 200.px'e kaymasını söyledik animation kodu ile'de bu sürecin ne kadar 
+              sürecegini belirledik
+            </p>
+            
+          </p>
+        </div>
+
+        <div id="butonlar" class="icerik-alani">
+          <h2>Pseudo Class’lar & Pseudo Elementler</h2>
+          <p>
+            Kral, bazen sayfadaki her şeye tek tek class yazmakla uğraşmak istemezsin… <br> 👉 “Kardeşim, 
+            ben bunu tıklayınca, üzerine gelince veya ilk eleman olunca değiştireyim” dersin. İşte bu 
+            sihirli dünyaya Pseudo Class deniyor. <br> Bir de “yazının ilk harfini değiştireyim, boş alan 
+            yaratayım” dersen, işte o da Pseudo Element.
+          </p>
+          <h2>Pseudo Class Nedir?</h2>
+          <p>Kısaca: “O an ne oluyorsa ona göre CSS uygula.”</p>
+          <h2>Meşhur Pseudo Class’lar:</h2>
+          <ol>
+            <li>:Hover → Üzerine gelince</li>
+            <p>a:hover { <br>
+            color: red; <br>
+            }
+            </p>
+            <p>Linkin üzerine gelince Renk degişsin demek</p>
+            <li>:Active → Tıklarken</li>
+            <p>
+            button:active { <br>
+            transform: scale(0.95); <br>
+            }
+            </p>
+            <p>Butona basınca azıcık küçülsün demek</p>
+            <li>:focus → Input’a tıklayınca</li>
+            <p>
+            input:focus { <br>
+            border-color: blue; <br>
+            }
+            </p>
+            <p>Kutuya tıklayınca kenarlıklar maviye dönüşür</p>
+            <li>:first-child → İlk eleman</li>
+            <p>
+            li:first-child { <br>
+            font-weight: bold; <br>
+            }
+            </p>
+            <p>Liste elemanlarının ilk elemanı kalın olsun </p>
+            <li>:nth-child(2) → 2. eleman seçilir</li>
+            <p>yani istedigimiz elemanı bu şekilde seçebiliriz</p>
+          </ol>
+          <h2>Pseudo Element Nedir?</h2>
+          <p>Kısaca: “Var olan elemanın bir parçasına stil ver.”</p>
+          <ol>
+            <li>
+              ::first-letter → İlk harfi şık yap
+            </li>
+            <p>
+              p::first-letter { <br>
+              font-size: 30px; <br>
+              color: orange; <br>
+              }
+            </p>
+            <p>Yukarıda tüm paragrafların ilk harfini 30px ve turuncu yaptık </p>
+            <li>::first-line → İlk satırı vurgula</li>
+            <p>
+              p::first-line { <br>
+              font-weight: bold; <br>
+              }
+            </p>
+            <p>tüm paragrafların ilk satırını kalın yaptık</p>
+            <li>::before ve ::after → Elemanın önüne ya da sonuna bir şey ekler (ama HTML'ye dokunmadan!)</li>
+            <p>
+              h1::before { <br>
+              content: "🔥 "; <br>
+              } <br>
+              h1::after { <br>
+              content: " 👑"; <br>
+              } <br>
+            </p>
+            <p>Yukarıda başlıktan önce 🔥 başlıktan sonra 👑 işareti koyduk</p>
+          </ol>
+          <h2>Pseudo Class vs Pseudo Element (Farkı Ne Kral? 🤔)</h2>
+          <img src="img/4.png" alt="">
+        </div>
+        <div id="hosgeldin" class="icerik-alani" style="display: block">
+          <h2>Hoşgeldin!</h2>
+          <p>Soldan bir konu seç.</p>
+        </div>
+      </div>
+    </div>
+   
+    <div style="text-align: center; margin: 30px;">
+  <button id="öncekiKonu">
+    Önceki Konuya Geç
+  </button>
+  <button id="sonrakiKonu">
+    Sonraki Konuya Geç
+  </button>
+</div>
+    <footer>
+      <h3>Made by Burak Akgün</h3>
+    </footer>
+    <script>
+      function showDiv(divId) {
+        const divs = document.querySelectorAll(".icerik-alani");
+        divs.forEach((div) => (div.style.display = "none"));
+        document.getElementById(divId).style.display = "block";
+      }
+    </script>
+    <script src="css.js"></script>
+  </body>
+</html>
